@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* ヘッダーのCSS */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    background: #fff;
+    position: relative;
+}
+
+/* 
+ *ユーザアイコン
+ */
+#user-icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20px;
+    z-index: 100;/* 重なり順を一番上にする */
+}
+
+#user-icon--big {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-icon--circle {
+    border-radius: 50%;
+    line-height: 27px;
+    width: 27px;
+    height: 27px;
+    padding: 0;
+    z-index: 3;
+}
+
+.user-icon--circle--big {
+    border-radius: 50%;
+    line-height: 145px;
+    width: 145px;
+    height: 145px;
+    padding: 0;
+    z-index: 3;
+    border: none;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* 
+ * メニュー
+ */
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+    display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    z-index: 1000;/* 重なり順を一番上にする */
+    cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+    bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+    top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.nav_content {
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    right: 100%;
+    z-index: 999;
+    background: rgb(110, 110, 110);
+    transition: .5s;
+    text-align: center;
+    padding-top: 20px;
+    opacity: 0.94;
+  }
+
+/* メニュー黒ポチを消す */
+.nav_list {
+    list-style: none;
+}
+  
+.nav_item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+right: unset;
+}

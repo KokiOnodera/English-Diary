@@ -1,0 +1,65 @@
+/* home画面に適用するスタイルシート */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html, body { 
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #e6e6e6;
+}
+
+.head-1 {
+    font-size: 70px;
+}
+
+.head-2 {
+    font-size: 60px;
+}
+
+.head-3 {
+    font-size: 50px;
+}
+
+.head-4 {
+    font-size: 41px;
+}
+
+.head-5 {
+    font-size: 28px;
+}
+
+.head-6 {
+    font-size: 20px;
+}
+
+.form-space {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    align-items: center;
+    flex-wrap: nowrap !important;
+}
+
+.window-hidden {
+    display:none;
+}
+
+.close-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+}
+
+.close-btn {
+    border-radius: 50%;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+
